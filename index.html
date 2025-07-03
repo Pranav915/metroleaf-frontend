@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Metroleaf helps urban communities convert unused terraces into productive vegetable gardens, bringing fresh, organic produce closer to home.">
+  <meta name="keywords" content="urban farming, terrace garden, organic vegetables, Metroleaf, society, green, fresh produce">
+  <meta name="author" content="Metroleaf">
+  <title>Metroleaf – Urban Terrace Farming</title>
+  <link rel="icon" href="favicon.ico">
+  <style>
+    :root {
+      --green: #3a7d3b;
+      --light-green: #e6f4ea;
+      --accent: #7ed957;
+      --gray: #f7f7f7;
+      --dark: #222;
+      --radius: 12px;
+      --max-width: 900px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--gray);
+      color: var(--dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header, main, footer {
+      width: 100%;
+    }
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(120deg, var(--green) 60%, var(--accent) 100%);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 1rem 3rem 1rem;
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #fff;
+      color: var(--green);
+      font-weight: 600;
+      padding: 0.9em 2em;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      transition: background 0.2s, color 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    /* About */
+    .about {
+      background: #fff;
+      border-radius: var(--radius);
+      margin-top: -2rem;
+      box-shadow: 0 2px 12px rgba(60,120,60,0.07);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    /* How It Works */
+    .how-it-works {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+    .step {
+      flex: 1 1 180px;
+      background: var(--light-green);
+      border-radius: var(--radius);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      min-width: 160px;
+      margin-bottom: 1rem;
+    }
+    .step-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.7rem;
+      display: block;
+    }
+    /* Benefits */
+    .benefits {
+      margin: 2.5rem 0 0 0;
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(60,120,60,0.07);
+    }
+    .benefits ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .benefits li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+    }
+    .checkmark {
+      color: var(--accent);
+      font-size: 1.3rem;
+      margin-right: 0.7em;
+    }
+    /* Promise */
+    .promise {
+      margin: 2.5rem 0 0 0;
+      background: var(--light-green);
+      border-radius: var(--radius);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-style: italic;
+    }
+    /* FAQs */
+    .faqs {
+      margin: 2.5rem 0 0 0;
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(60,120,60,0.07);
+    }
+    .faqs h2 {
+      margin-bottom: 1rem;
+    }
+    .faq-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .faq-list li {
+      margin-bottom: 1.2rem;
+    }
+    .faq-q {
+      font-weight: 600;
+      color: var(--green);
+    }
+    .faq-a {
+      margin-left: 0.5em;
+      display: inline;
+    }
+    /* Call to Action */
+    .cta {
+      margin: 2.5rem 0 0 0;
+      background: linear-gradient(90deg, var(--accent) 60%, var(--green) 100%);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .cta .btn {
+      margin-top: 1rem;
+      background: #fff;
+      color: var(--green);
+    }
+    /* Contact */
+    .contact {
+      margin: 2.5rem 0 0 0;
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(60,120,60,0.07);
+      text-align: center;
+    }
+    .contact a {
+      color: var(--green);
+      text-decoration: underline;
+    }
+    /* Footer */
+    footer {
+      margin-top: 2.5rem;
+      background: var(--green);
+      color: #fff;
+      text-align: center;
+      padding: 1.2rem 0 0.7rem 0;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .social-links {
+      margin: 0.5rem 0 0.7rem 0;
+    }
+    .social-links a {
+      color: #fff;
+      margin: 0 0.5em;
+      font-size: 1.3rem;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .social-links a:hover {
+      opacity: 1;
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+      .container { padding: 1.2rem 0.5rem; }
+      .hero h1 { font-size: 2rem; }
+      .how-it-works { flex-direction: column; gap: 1.2rem; }
+      .step { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <div class="container">
+        <h1>Grow Local. Eat Fresh. Live Healthy.</h1>
+        <p>Transform your society's terrace into a thriving vegetable garden with Metroleaf.</p>
+        <a href="https://forms.gle/your-google-form" class="btn" target="_blank" rel="noopener">Express Interest</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="about container">
+      <h2>About Metroleaf</h2>
+      <p>Metroleaf helps urban communities convert unused terraces into productive vegetable gardens, bringing fresh, organic produce closer to home.</p>
+    </section>
+    <section class="container">
+      <h2 style="text-align:center; margin-bottom:1.5rem;">How It Works</h2>
+      <div class="how-it-works">
+        <div class="step">
+          <span class="step-icon" aria-label="Setup">🌱</span>
+          <h3>Setup</h3>
+          <p>We install a garden on your society terrace</p>
+        </div>
+        <div class="step">
+          <span class="step-icon" aria-label="Grow">👩‍🌾</span>
+          <h3>Grow</h3>
+          <p>Organic vegetables cultivated by experts</p>
+        </div>
+        <div class="step">
+          <span class="step-icon" aria-label="Harvest">🧺</span>
+          <h3>Harvest & Deliver</h3>
+          <p>Weekly fresh veggie baskets</p>
+        </div>
+        <div class="step">
+          <span class="step-icon" aria-label="Sustain">♻️</span>
+          <h3>Sustain</h3>
+          <p>Eco-friendly, low-maintenance design</p>
+        </div>
+      </div>
+    </section>
+    <section class="benefits container">
+      <h2>Benefits for Societies</h2>
+      <ul>
+        <li><span class="checkmark">✔️</span>Fresh organic vegetables for residents</li>
+        <li><span class="checkmark">✔️</span>Greener, cooler terrace spaces</li>
+        <li><span class="checkmark">✔️</span>15% revenue share for society funds</li>
+        <li><span class="checkmark">✔️</span>Healthier lifestyle for families</li>
+      </ul>
+    </section>
+    <section class="promise container">
+      <p>We guarantee weekly baskets of fresh, pesticide-free vegetables, grown locally on your terrace or sourced from trusted organic partners.</p>
+    </section>
+    <section class="faqs container">
+      <h2>FAQs</h2>
+      <ul class="faq-list">
+        <li><span class="faq-q">How do you prevent water seepage?</span><span class="faq-a">Using drain cells and 600 GSM grow bags.</span></li>
+        <li><span class="faq-q">Who pays for the setup?</span><span class="faq-a">Society members + Metroleaf split.</span></li>
+        <li><span class="faq-q">Contract period?</span><span class="faq-a">6 months minimum.</span></li>
+        <li><span class="faq-q">Water needs?</span><span class="faq-a">~4000 litres/month for 500 sq.ft.</span></li>
+      </ul>
+    </section>
+    <section class="cta container">
+      <h2>Ready to green your terrace? Fill our interest form today!</h2>
+      <a href="https://forms.gle/your-google-form" class="btn" target="_blank" rel="noopener">Express Interest</a>
+    </section>
+    <section class="contact container">
+      <h2>Contact</h2>
+      <p><strong>Phone:</strong> <a href="tel:7378776427">7378776427</a> / <a href="tel:7066834146">7066834146</a></p>
+      <p><strong>Email:</strong> <a href="mailto:metroleaf0124@gmail.com">metroleaf0124@gmail.com</a></p>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="#" aria-label="Instagram">&#x1F33F;</a>
+        <a href="#" aria-label="Facebook">&#x1F426;</a>
+        <a href="#" aria-label="LinkedIn">&#x1F4BB;</a>
+      </div>
+      <div style="font-size:0.95em; opacity:0.8;">&copy; 2024 Metroleaf. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html> 
